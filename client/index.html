@@ -1,18 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Account</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Add these CDN scripts -->
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: #2c2a36;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      width: 850px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #1f1d29;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* Left Image Section */
+    .left {
+      flex: 1;
+      background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=870&q=80') no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .left::after {
+      content: "Capturing Moments, Creating Memories";
+      position: absolute;
+      bottom: 30px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    /* Right Form Section */
+    .right {
+      flex: 1;
+      padding: 40px;
+      background: #2a2736;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .right h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .right p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #bbb;
+    }
+
+    .right p a {
+      color: #8b5cf6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .input-group input {
+      flex: 1;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      background: #3a3747;
+      color: #fff;
+    }
+
+    input::placeholder {
+      color: #aaa;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    .checkbox input {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+
+    .checkbox a {
+      color: #8b5cf6;
+      text-decoration: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      background: #8b5cf6;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #7c3aed;
+    }
+
+    .social {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .social button {
+      flex: 1;
+      background: #3a3747;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid #444;
+    }
+
+    .social img {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
 </head>
 <body>
-    <div id="root"></div>
-    <!-- Use type="text/babel" for JSX -->
-    <script src="index.js" type="text/babel"></script>
+  <div class="container">
+    <!-- Left Image -->
+    <div class="left"></div>
+
+    <!-- Right Form -->
+    <div class="right">
+      <h2>Create an account</h2>
+      <p>Already have an account? <a href="#">Log in</a></p>
+
+      <div class="input-group">
+        <input type="text" placeholder="First name">
+        <input type="text" placeholder="Last name">
+      </div>
+
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Enter your password">
+
+      <div class="checkbox">
+        <input type="checkbox" checked>
+        <label>I agree to the <a href="#">Terms & Conditions</a></label>
+      </div>
+
+      <button>Create account</button>
+
+      <div style="text-align:center; margin: 10px 0; font-size: 14px; color:#aaa;">Or register with</div>
+
+      <div class="social">
+        <button><img src="https://www.svgrepo.com/show/475656/google-color.svg"> Google</button>
+        <button><img src="https://www.svgrepo.com/show/349513/apple.svg"> Apple</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
