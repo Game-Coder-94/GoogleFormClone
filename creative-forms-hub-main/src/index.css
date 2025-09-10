@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Creative Forms Hub - Modern Design System */
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --background: 240 10% 98%;
+    --foreground: 240 12% 15%;
+
+    /* Card & Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 12% 15%;
+    --card-border: 240 6% 90%;
+
+    /* Interactive Elements */
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 12% 15%;
+
+    /* Brand Colors - Purple/Blue Gradient Theme */
+    --primary: 262 84% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 262 84% 52%;
+    --primary-light: 262 84% 95%;
+
+    /* Secondary & Supporting Colors */
+    --secondary: 240 6% 95%;
+    --secondary-foreground: 240 12% 25%;
+    --secondary-hover: 240 6% 90%;
+
+    /* Muted & Subtle Elements */
+    --muted: 240 6% 96%;
+    --muted-foreground: 240 5% 45%;
+
+    /* Accent Colors */
+    --accent: 200 95% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 200 95% 95%;
+
+    /* Status Colors */
+    --success: 142 76% 48%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 95%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 84% 95%;
+
+    /* Form Elements */
+    --border: 240 6% 88%;
+    --input: 240 6% 96%;
+    --input-border: 240 6% 85%;
+    --ring: 262 84% 58%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 84% 58%), hsl(280 84% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200 95% 60%), hsl(220 95% 65%));
+    --gradient-surface: linear-gradient(135deg, hsl(0 0% 100%), hsl(240 6% 98%));
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+    /* Spacing & Layout */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Base Colors - Dark Theme */
+    --background: 240 12% 8%;
+    --foreground: 240 6% 95%;
+
+    /* Card & Surface Colors */
+    --card: 240 10% 12%;
+    --card-foreground: 240 6% 95%;
+    --card-border: 240 8% 20%;
+
+    /* Interactive Elements */
+    --popover: 240 10% 12%;
+    --popover-foreground: 240 6% 95%;
+
+    /* Brand Colors - Maintain vibrant purple/blue */
+    --primary: 262 84% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 262 84% 70%;
+    --primary-light: 262 84% 20%;
+
+    /* Secondary & Supporting Colors */
+    --secondary: 240 8% 18%;
+    --secondary-foreground: 240 6% 85%;
+    --secondary-hover: 240 8% 22%;
+
+    /* Muted & Subtle Elements */
+    --muted: 240 8% 16%;
+    --muted-foreground: 240 6% 65%;
+
+    /* Accent Colors */
+    --accent: 200 95% 65%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 200 95% 20%;
+
+    /* Status Colors */
+    --success: 142 76% 55%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 20%;
+
+    --warning: 38 92% 60%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 20%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 84% 20%;
+
+    /* Form Elements */
+    --border: 240 8% 22%;
+    --input: 240 8% 16%;
+    --input-border: 240 8% 25%;
+    --ring: 262 84% 65%;
+
+    /* Gradients - Dark variants */
+    --gradient-primary: linear-gradient(135deg, hsl(262 84% 65%), hsl(280 84% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(200 95% 65%), hsl(220 95% 70%));
+    --gradient-surface: linear-gradient(135deg, hsl(240 10% 12%), hsl(240 8% 16%));
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+
+    /* Sidebar */
+    --sidebar-background: 240 10% 10%;
+    --sidebar-foreground: 240 6% 90%;
+    --sidebar-primary: 262 84% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 8% 18%;
+    --sidebar-accent-foreground: 240 6% 90%;
+    --sidebar-border: 240 8% 20%;
+    --sidebar-ring: 262 84% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  /* Beautiful gradient backgrounds */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .gradient-surface {
+    background: var(--gradient-surface);
+  }
+
+  /* Custom shadows */
+  .shadow-elegant {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-glass {
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-smooth;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* Form styles */
+  .form-glass {
+    @apply glass rounded-lg p-6;
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-hover));
+  }
+}
