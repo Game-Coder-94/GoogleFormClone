@@ -8,6 +8,10 @@
 
 There are several ways of editing your application.
 
+## Project Photos
+![Screenshot1](Project_ss/ycce_ss1.png)
+![Screenshot2](Project_ss/ycce_ss2.png)
+
 **Use Lovable**
 
 Simply visit the [Lovable Project](https://lovable.dev/projects/f6fbeec4-bf19-404e-b6b5-5972e45168af) and start prompting.
